@@ -41,4 +41,10 @@ export default [
     stack: ['React', 'Tailwind', 'Vite'],
     link: 'https://github.com/anthonyeca/anthonyeca.dev',
   },
+  {
+    title: 'Reading list',
+    imgUrl: '/assets/reading_list.png',
+    stack: ['React', 'Vite'],
+    link: 'anthonyeca-dev-readinglist.netlify.app',
+  },
 ]
