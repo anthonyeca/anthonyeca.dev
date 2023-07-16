@@ -45,6 +45,6 @@ export default [
     title: 'Reading list',
     imgUrl: '/assets/reading_list.png',
     stack: ['React', 'Vite'],
-    link: 'anthonyeca-dev-readinglist.netlify.app',
+    link: 'https://anthonyeca-dev-readinglist.netlify.app',
   },
 ]
