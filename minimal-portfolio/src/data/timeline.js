@@ -11,13 +11,13 @@ export default [
     title: 'Middleware Technician',
     duration: '2 and a half years',
     details:
-      'This job involves being a middleware technician on the Genesis project at Telefónica. Among the tasks are operating systems in GNU/Linux environments, administering Web and Was instances (JBOSS, WEBLOGIC, WEBSPHERE, TOMCATS, etc.), administering middleware technologies such as MQ queues, CICS, and administering TUXEDO. It also handles the startup and shutdown of middleware instances (Weblogic, apache, nginx and jboss), resolving incidents subject to ANS, executing changes approved in the CAB and ticketing. In addition, it performs log analysis, prepares and executes changes, produces reports and performs implementations.',
+      'Being a middleware technician on the Genesis project at Telefónica. Among the tasks are operating systems in GNU/Linux environments, administering Web and Was instances (JBOSS, WEBLOGIC, WEBSPHERE, TOMCATS, etc.), administering middleware technologies such as MQ queues, CICS, and administering TUXEDO. It also handles the startup and shutdown of middleware instances (Weblogic, apache, nginx and jboss), resolving incidents subject to ANS, executing changes approved in the CAB and ticketing. In addition, it performs log analysis, prepares and executes changes, produces reports and performs implementations.',
   },
   {
     year: '2017',
     title: 'Web developer',
     duration: '1 year and 10 months',
     details:
-      'This job involves developing and managing an online store, being innovative in terms of marketing campaigns. It also takes care of the maintenance and updating of physical and digital products on the web, as well as being the community manager on different social networks. In addition, it is responsible for stock control.',
+      'Developing and managing an online store, being innovative in terms of marketing campaigns. It also takes care of the maintenance and updating of physical and digital products on the web, as well as being the community manager on different social networks. In addition, it is responsible for stock control.',
   },
 ]
