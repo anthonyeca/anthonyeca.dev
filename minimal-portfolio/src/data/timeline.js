@@ -2,7 +2,7 @@ export default [
   {
     year: 'Today',
     title: 'Application Support at BNP Paribas',
-    duration: '1 year',
+    duration: '2 years',
     details:
       'This job involves a series of tasks related to the technical analysis of an application’s architecture, the assessment of risks and compatibility requirements for a new environment, and deployment in a test environment. It also includes functional testing and error correction, as well as the final step to production after obtaining the client’s Signoff. In addition, it is responsible for managing permissions in accordance with BNP’s security policies.',
   },

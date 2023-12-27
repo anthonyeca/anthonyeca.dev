@@ -35,12 +35,7 @@ export default [
     stack: ['React', 'Vite'],
     link: 'https://gif-expert-anthonyeca.netlify.app/',
   },
-  {
-    title: 'Developer Portfolio',
-    imgUrl: '/assets/portfolio.webp',
-    stack: ['React', 'Tailwind', 'Vite'],
-    link: 'https://github.com/anthonyeca/anthonyeca.dev',
-  },
+
   {
     title: 'Reading list',
     imgUrl: '/assets/reading_list.png',
