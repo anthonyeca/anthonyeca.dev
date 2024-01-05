@@ -7,6 +7,7 @@ function Contact() {
           className="bg-gray-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="View the repository on github"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,6 +24,7 @@ function Contact() {
           className="bg-blue-600 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="View the profile on Linkedin"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +41,7 @@ function Contact() {
           className="bg-teal-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Send a personal email"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
