@@ -1,15 +1,9 @@
 export default [
   {
-    title: 'Redbull',
-    imgUrl: '/assets/redbull.webp',
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://anthonyeca.github.io/web-redbull-responsive/',
-  },
-  {
-    title: 'Gndx-Challenges',
-    imgUrl: '/assets/gndx.webp',
-    stack: ['HTML', 'CSS'],
-    link: 'https://anthonyeca.github.io/gndx-challenges/',
+    title: 'URL shortener',
+    imgUrl: '/assets/ecashort.webp',
+    stack: ['Astro', 'TailwindCSS'],
+    link: 'https://ecashort.netlify.app/',
   },
   {
     title: 'Weather App',
@@ -29,13 +23,6 @@ export default [
     stack: ['Python'],
     link: 'https://github.com/anthonyeca/unzipfiler',
   },
-  {
-    title: 'Gif website',
-    imgUrl: '/assets/gifExpertApp.webp',
-    stack: ['React', 'Vite'],
-    link: 'https://gif-expert-anthonyeca.netlify.app/',
-  },
-
   {
     title: 'Reading list',
     imgUrl: '/assets/reading_list.webp',
