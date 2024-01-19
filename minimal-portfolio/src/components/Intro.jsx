@@ -5,7 +5,7 @@ function Intro() {
         Anthony Challout
       </h1>
       <p className="text-base md:text-xl mb-3 font-medium">
-        Application Support & Web Developer
+        Application Support Technician & Web Developer
       </p>
       <p className="text-sm max-w-xl mb-6 font-bold">
         Graduated as a Network Computer Systems Administrator, with extensive
