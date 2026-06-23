@@ -1,22 +1,105 @@
+---
+import '/src/styles/global.css'
+import '@fontsource-variable/onest'
+import { techs, type Lang } from '../i18n/content'
+import { SITE } from '../consts'
+
+interface Props {
+  lang: Lang
+  title: string
+  description: string
+}
+
+const { lang, title, description } = Astro.props
+const site = Astro.site ?? new URL(SITE.url)
+const canonical = new URL(Astro.url.pathname, site).href
+const ogImage = new URL('/og.jpg', site).href
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: SITE.name,
+  description,
+  url: site.href,
+  image: ogImage,
+  email: SITE.email,
+  priceRange: '$$',
+  areaServed: 'Worldwide',
+  knowsAbout: [...techs],
+  sameAs: [SITE.linkedin, SITE.github],
+  founder: {
+    '@type': 'Person',
+    name: SITE.name,
+    jobTitle: lang === 'es' ? 'Desarrollador web' : 'Web developer',
+    sameAs: [SITE.linkedin],
+  },
+}
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="es" href="https://anthonyeca.dev/" />
+    <link rel="alternate" hreflang="en" href="https://anthonyeca.dev/en/" />
+
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={SITE.twitter} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+    <slot />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  :root {
+    --bg: #0a0a0a;
+    --accent: #34d399;
+  }
+  html {
+    font-family: 'Onest Variable', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+    color: rgba(255, 255, 255, 0.9);
+  }
+  body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+  }
+  /* Soft emerald glow behind the hero */
+  .page-glow {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(60rem 40rem at 50% -10%, rgba(52, 211, 153, 0.16), transparent 60%),
+      radial-gradient(40rem 30rem at 100% 10%, rgba(45, 212, 191, 0.08), transparent 55%);
+  }
+  ::selection {
+    background: rgba(52, 211, 153, 0.3);
+  }
 </style>

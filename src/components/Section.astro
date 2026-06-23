@@ -1,0 +1,14 @@
+---
+interface Props {
+  id?: string
+  width?: 'default' | 'narrow'
+  class?: string
+}
+
+const { id, width = 'default', class: className = '' } = Astro.props
+const maxWidth = width === 'narrow' ? 'max-w-5xl' : 'max-w-6xl'
+---
+
+<section id={id} class={`mx-auto w-full ${maxWidth} scroll-mt-24 py-16 md:py-24 ${className}`}>
+  <slot />
+</section>

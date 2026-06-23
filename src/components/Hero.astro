@@ -1,0 +1,53 @@
+---
+import type { Lang } from '../i18n/content'
+import { useContent } from '../i18n/utils'
+import { MAILTO } from '../consts'
+import Button from './Button.astro'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useContent(lang)
+---
+
+<div class="mx-auto flex max-w-3xl flex-col items-center text-center">
+  <a
+    href={MAILTO}
+    class="group inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-1.5 text-sm font-medium text-emerald-300 transition hover:border-emerald-400/60"
+  >
+    <span class="relative flex size-2">
+      <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+      <span class="relative inline-flex size-2 rounded-full bg-emerald-400"></span>
+    </span>
+    {t.hero.badge}
+  </a>
+
+  <h1 class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
+    {t.hero.title}{' '}
+    <span class="bg-linear-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
+      {t.hero.highlight}
+    </span>
+  </h1>
+
+  <p class="mt-6 max-w-2xl text-lg text-zinc-300 sm:text-xl">
+    {t.hero.subtitle}
+  </p>
+
+  <div class="mt-9 flex flex-col items-center gap-4 sm:flex-row">
+    <Button href={MAILTO}>
+      {t.hero.ctaPrimary}
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </svg>
+    </Button>
+    <Button href="#work" variant="secondary">
+      {t.hero.ctaSecondary}
+    </Button>
+  </div>
+
+  <p class="mt-10 text-sm font-medium text-zinc-500">
+    {t.hero.trust}
+  </p>
+</div>

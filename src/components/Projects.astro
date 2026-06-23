@@ -1,0 +1,19 @@
+---
+import type { Lang } from '../i18n/content'
+import { useContent } from '../i18n/utils'
+import SectionHeading from './SectionHeading.astro'
+import ProjectItem from './ProjectItem.astro'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useContent(lang)
+---
+
+<SectionHeading eyebrow={t.work.eyebrow} title={t.work.title} subtitle={t.work.subtitle} />
+
+<ol class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+  {t.work.projects.map((project) => <ProjectItem {...project} />)}
+</ol>

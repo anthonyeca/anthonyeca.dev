@@ -1,0 +1,24 @@
+---
+import type { ServiceItem } from '../i18n/content'
+
+type Props = ServiceItem
+
+const { icon, title, description } = Astro.props
+
+const paths: Record<ServiceItem['icon'], string> = {
+  web: 'M3 9h18M9 21V9M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Z',
+  app: 'M7 8h10M7 12h6M5 4h14a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1ZM9 20h6M12 16v4',
+  speed: 'M13 2 4.5 13H11l-1 9 8.5-11H12l1-9Z',
+  support: 'M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01',
+}
+---
+
+<div class="group h-full rounded-2xl border border-white/10 bg-zinc-900/40 p-6 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-zinc-900/70">
+  <div class="flex size-12 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-400 transition group-hover:bg-emerald-400/20">
+    <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d={paths[icon]} />
+    </svg>
+  </div>
+  <h3 class="mt-5 text-lg font-semibold text-white">{title}</h3>
+  <p class="mt-2 text-sm leading-relaxed text-zinc-400">{description}</p>
+</div>

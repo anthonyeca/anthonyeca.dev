@@ -1,0 +1,53 @@
+---
+import type { Lang } from '../i18n/content'
+import { useContent } from '../i18n/utils'
+import SectionHeading from './SectionHeading.astro'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useContent(lang)
+---
+
+<SectionHeading eyebrow={t.faq.eyebrow} title={t.faq.title} subtitle={t.faq.subtitle} />
+
+<div class="mx-auto mt-12 max-w-3xl space-y-4">
+  {
+    t.faq.items.map((item) => (
+      <details name="faq" class="faq-item group rounded-2xl border border-white/10 bg-zinc-900/40 px-6 transition hover:border-emerald-400/30 open:border-emerald-400/30">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-left text-base font-semibold text-white marker:hidden [&::-webkit-details-marker]:hidden">
+          {item.q}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-5 shrink-0 text-emerald-400 transition duration-300 group-open:rotate-45"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </summary>
+        <p class="pb-5 text-sm leading-relaxed text-zinc-400">{item.a}</p>
+      </details>
+    ))
+  }
+</div>
+
+<script>
+  // Fallback for browsers that don't support the exclusive-accordion `name`
+  // attribute on <details>: close any other open item when one is opened.
+  const items = Array.from(document.querySelectorAll<HTMLDetailsElement>('.faq-item'))
+  items.forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (!item.open) return
+      items.forEach((other) => {
+        if (other !== item) other.open = false
+      })
+    })
+  })
+</script>

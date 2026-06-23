@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets'
+import type { Project } from '../i18n/content'
+
+type Props = Project
+
+const { title, technologies, src, alt, link } = Astro.props
+---
+
+<li class="group overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/40 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40">
+  <a href={link} target="_blank" rel="noopener noreferrer" class="block">
+    <div class="aspect-video overflow-hidden">
+      <Image
+        src={src}
+        alt={alt}
+        loading="lazy"
+        widths={[400, 600, 800]}
+        sizes="(min-width: 768px) 600px, 100vw"
+        class="size-full object-cover transition duration-500 ease-out group-hover:scale-105"
+      />
+    </div>
+    <div class="flex items-center justify-between gap-3 p-5">
+      <div>
+        <h3 class="text-lg font-semibold text-white transition group-hover:text-emerald-400">{title}</h3>
+        <p class="mt-1 text-xs font-medium text-emerald-400/80">{technologies}</p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-5 shrink-0 text-zinc-500 transition group-hover:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 17 17 7M9 7h8v8" />
+      </svg>
+    </div>
+  </a>
+</li>

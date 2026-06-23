@@ -1,0 +1,38 @@
+---
+import type { Lang } from '../i18n/content'
+import { useContent } from '../i18n/utils'
+import { SITE, MAILTO } from '../consts'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useContent(lang)
+const currentYear = new Date().getFullYear()
+---
+
+<footer class="mt-24 border-t border-white/10">
+  <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row">
+    <p class="text-sm text-zinc-500">
+      © {currentYear} {SITE.name}. {t.footer.rights}
+    </p>
+
+    <div class="flex items-center gap-5">
+      <a
+        href={SITE.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-zinc-400 transition hover:text-emerald-400"
+      >
+        LinkedIn
+      </a>
+      <a href={MAILTO} class="text-sm text-zinc-400 transition hover:text-emerald-400">
+        Email
+      </a>
+      <a href="#top" class="text-sm text-zinc-400 transition hover:text-emerald-400">
+        {t.footer.backToTop}
+      </a>
+    </div>
+  </div>
+</footer>

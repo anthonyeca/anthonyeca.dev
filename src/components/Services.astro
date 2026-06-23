@@ -1,0 +1,19 @@
+---
+import type { Lang } from '../i18n/content'
+import { useContent } from '../i18n/utils'
+import SectionHeading from './SectionHeading.astro'
+import ServiceItem from './ServiceItem.astro'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useContent(lang)
+---
+
+<SectionHeading eyebrow={t.services.eyebrow} title={t.services.title} subtitle={t.services.subtitle} />
+
+<div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+  {t.services.items.map((item) => <ServiceItem {...item} />)}
+</div>

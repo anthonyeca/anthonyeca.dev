@@ -1,0 +1,120 @@
+---
+import { Image } from 'astro:assets'
+import type { Lang } from '../i18n/content'
+import { useContent, localizePath, otherLang } from '../i18n/utils'
+import { MAILTO } from '../consts'
+import profile from '../assets/profile.webp'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useContent(lang)
+const other = otherLang(lang)
+
+const navItems = [
+  { title: t.nav.services, url: '#services' },
+  { title: t.nav.process, url: '#process' },
+  { title: t.nav.about, url: '#about' },
+  { title: t.nav.work, url: '#work' },
+  { title: t.nav.faq, url: '#faq' },
+]
+---
+
+<header class="fixed top-0 z-50 w-full px-4">
+  <div class="mx-auto mt-3 w-full max-w-5xl">
+    <div class="flex items-center justify-between gap-3 rounded-full border border-white/10 bg-zinc-900/60 px-3 py-2 backdrop-blur-md sm:px-4">
+      <a
+        href={localizePath('/', lang)}
+        class="flex items-center gap-2 pl-1 text-sm font-bold tracking-tight text-white transition hover:text-emerald-400"
+      >
+        <Image src={profile} alt="Anthony Challout" width={56} height={56} class="size-7 rounded-full" />
+        <span class="hidden sm:inline">Anthony Challout</span>
+      </a>
+
+      <nav class="hidden items-center gap-1 text-sm font-medium text-zinc-300 md:flex">
+        {
+          navItems.map((link) => (
+            <a class="rounded-full px-3 py-1.5 transition hover:bg-white/5 hover:text-emerald-400" href={link.url}>
+              {link.title}
+            </a>
+          ))
+        }
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a
+          href={localizePath('/', other)}
+          class="rounded-full border border-white/10 px-2.5 py-1 text-xs font-semibold uppercase text-zinc-300 transition hover:border-emerald-400/50 hover:text-emerald-400"
+          aria-label={other === 'es' ? 'Ver en español' : 'View in English'}
+        >
+          {other}
+        </a>
+        <a
+          href={MAILTO}
+          class="hidden rounded-full bg-emerald-400 px-3.5 py-1.5 text-sm font-semibold text-zinc-950 transition hover:bg-emerald-300 sm:inline-flex"
+        >
+          {t.nav.contact}
+        </a>
+
+        <button
+          type="button"
+          id="menu-toggle"
+          class="flex size-9 items-center justify-center rounded-full border border-white/10 text-zinc-200 transition hover:border-emerald-400/50 hover:text-emerald-400 md:hidden"
+          aria-label="Menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav
+      id="mobile-menu"
+      class="mt-2 hidden flex-col gap-1 rounded-2xl border border-white/10 bg-zinc-900/90 p-2 text-sm font-medium text-zinc-200 backdrop-blur-md md:hidden"
+    >
+      {
+        navItems.map((link) => (
+          <a class="mobile-link rounded-xl px-4 py-2.5 transition hover:bg-white/5 hover:text-emerald-400" href={link.url}>
+            {link.title}
+          </a>
+        ))
+      }
+      <a
+        class="mobile-link mt-1 rounded-xl bg-emerald-400 px-4 py-2.5 text-center font-semibold text-zinc-950 transition hover:bg-emerald-300"
+        href={MAILTO}
+      >
+        {t.nav.contact}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle')
+  const menu = document.getElementById('mobile-menu')
+
+  function closeMenu() {
+    menu?.classList.add('hidden')
+    menu?.classList.remove('flex')
+    toggle?.setAttribute('aria-expanded', 'false')
+  }
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden')
+    if (isOpen) {
+      closeMenu()
+    } else {
+      menu?.classList.remove('hidden')
+      menu?.classList.add('flex')
+      toggle?.setAttribute('aria-expanded', 'true')
+    }
+  })
+
+  document.querySelectorAll('.mobile-link').forEach((link) => link.addEventListener('click', closeMenu))
+  document.addEventListener('keydown', (e) => e.key === 'Escape' && closeMenu())
+</script>
