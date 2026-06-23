@@ -186,7 +186,7 @@ export const content: Record<Lang, SiteContent> = {
         'Soy Anthony, desarrollador web. Convierto tu idea en una web moderna, rápida y fácil de gestionar, pensada para conseguir más clientes.',
       ctaPrimary: 'Hablemos de tu proyecto',
       ctaSecondary: 'Ver proyectos',
-      trust: '8+ años en tecnología · BNP Paribas · Telefónica',
+      trust: '+8 años en tecnología · BNP Paribas · Telefónica',
     },
     services: {
       eyebrow: 'Servicios',
@@ -252,7 +252,7 @@ export const content: Record<Lang, SiteContent> = {
       subtitle:
         'Más de 5 años trabajando con tecnología en entornos exigentes. Sé lo que es entregar soluciones fiables y dar la cara cuando algo importa de verdad.',
       stats: [
-        { value: '8+', label: 'años desarrollando' },
+        { value: '+8', label: 'años desarrollando' },
         { value: '100%', label: 'proyectos a medida' },
         { value: '24h', label: 'tiempo de respuesta' },
       ],
