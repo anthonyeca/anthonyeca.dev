@@ -186,7 +186,7 @@ export const content: Record<Lang, SiteContent> = {
         'Soy Anthony, desarrollador web. Convierto tu idea en una web moderna, rápida y fácil de gestionar, pensada para conseguir más clientes.',
       ctaPrimary: 'Hablemos de tu proyecto',
       ctaSecondary: 'Ver proyectos',
-      trust: '5+ años en IT · BNP Paribas · Telefónica',
+      trust: '8+ años en tecnología · BNP Paribas · Telefónica',
     },
     services: {
       eyebrow: 'Servicios',
@@ -252,7 +252,7 @@ export const content: Record<Lang, SiteContent> = {
       subtitle:
         'Más de 5 años trabajando con tecnología en entornos exigentes. Sé lo que es entregar soluciones fiables y dar la cara cuando algo importa de verdad.',
       stats: [
-        { value: '5+', label: 'años en IT' },
+        { value: '8+', label: 'años desarrollando' },
         { value: '100%', label: 'proyectos a medida' },
         { value: '24h', label: 'tiempo de respuesta' },
       ],
@@ -354,7 +354,7 @@ export const content: Record<Lang, SiteContent> = {
         'I’m Anthony, a web developer. I turn your idea into a modern, fast and easy-to-manage website, built to win you more clients.',
       ctaPrimary: 'Let’s talk about your project',
       ctaSecondary: 'View work',
-      trust: '5+ years in IT · BNP Paribas · Telefónica',
+      trust: '8+ years in tech · BNP Paribas · Telefónica',
     },
     services: {
       eyebrow: 'Services',
@@ -420,7 +420,7 @@ export const content: Record<Lang, SiteContent> = {
       subtitle:
         'Over 5 years working with technology in demanding environments. I know what it takes to deliver reliable solutions and show up when it really matters.',
       stats: [
-        { value: '5+', label: 'years in IT' },
+        { value: '8+', label: 'years developing' },
         { value: '100%', label: 'custom projects' },
         { value: '24h', label: 'response time' },
       ],
