@@ -266,14 +266,14 @@ export const content: Record<Lang, SiteContent> = {
             'Soporte a producción para BNP Paribas CIB (Corporate & Institutional Banking): gestión de incidencias, problemas y cambios sobre más de 260 aplicaciones europeas. Como referente del equipo, mentorizo a compañeros, automatizo tareas y reporting (Autosys, PowerShell, flujos CFT/FTaaS), monitorizo con Dynatrace y coordino migraciones y pruebas de continuidad (DR/BCP) con los hubs centrales de IT.',
         },
         {
-          date: '2023 – Diciembre 2025',
+          date: '2022 – Diciembre 2025',
           title: 'Application Production Support',
           company: 'Optimissa · BNP Paribas CIB',
           description:
             'Entrada al equipo de Application Production Support de BNP Paribas CIB a través de Optimissa. Soporte técnico y funcional a usuarios de aplicaciones internas y de terceros, gestión de incidencias y peticiones, pruebas y validaciones, documentación de la base de conocimiento y soporte a los equipos de desarrollo en proyectos y UAT. Entornos Windows/Linux, WebSphere/JBoss/IIS, MS-SQL y Oracle.',
         },
         {
-          date: '2020 · 2,5 años',
+          date: '2020 – Mayo 2022',
           title: 'Técnico de Middleware',
           company: 'Inetum',
           description:
@@ -434,14 +434,14 @@ export const content: Record<Lang, SiteContent> = {
             'Application production support for BNP Paribas CIB (Corporate & Institutional Banking): incident, problem and change management across 260+ European applications. As a team reference, I mentor colleagues, automate tasks and reporting (Autosys, PowerShell, CFT/FTaaS flows), monitor with Dynatrace and coordinate migrations and continuity (DR/BCP) testing with central IT hubs.',
         },
         {
-          date: '2023 – December 2025',
+          date: '2022 – December 2025',
           title: 'Application Production Support',
           company: 'Optimissa · BNP Paribas CIB',
           description:
             'Joined the BNP Paribas CIB Application Production Support team through Optimissa. Technical and functional support for users of internal and third-party applications, incident and request management, testing and validation, knowledge-base documentation and support to development teams on projects and UAT. Windows/Linux, WebSphere/JBoss/IIS, MS-SQL and Oracle environments.',
         },
         {
-          date: '2020 · 2.5 years',
+          date: '2020 – May 2022',
           title: 'Middleware Technician',
           company: 'Inetum',
           description:
