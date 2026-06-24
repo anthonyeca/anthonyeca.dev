@@ -15,6 +15,12 @@ export const defaultLang = 'es'
 
 export type Lang = keyof typeof languages
 
+/** Localized URLs for the legal pages, used by the footer and the language switch. */
+export const legalRoutes = {
+  es: { privacy: '/privacidad', legal: '/aviso-legal' },
+  en: { privacy: '/en/privacy', legal: '/en/legal-notice' },
+} as const
+
 export interface ServiceItem {
   icon: 'web' | 'app' | 'speed' | 'support'
   title: string
@@ -88,7 +94,7 @@ interface SiteContent {
   }
   work: { eyebrow: string; title: string; subtitle: string; projects: Project[] }
   cta: { title: string; subtitle: string; email: string; linkedin: string }
-  footer: { rights: string; backToTop: string }
+  footer: { rights: string; backToTop: string; privacy: string; legal: string }
 }
 
 const projects: Project[] = [
@@ -303,6 +309,8 @@ export const content: Record<Lang, SiteContent> = {
     footer: {
       rights: 'Todos los derechos reservados.',
       backToTop: 'Volver arriba',
+      privacy: 'Privacidad',
+      legal: 'Aviso legal',
     },
   },
   en: {
@@ -471,6 +479,8 @@ export const content: Record<Lang, SiteContent> = {
     footer: {
       rights: 'All rights reserved.',
       backToTop: 'Back to top',
+      privacy: 'Privacy',
+      legal: 'Legal notice',
     },
   },
 }

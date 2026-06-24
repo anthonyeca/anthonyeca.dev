@@ -1,5 +1,6 @@
 ---
 import type { Lang } from '../i18n/content'
+import { legalRoutes } from '../i18n/content'
 import { useContent } from '../i18n/utils'
 import { SITE, MAILTO } from '../consts'
 
@@ -10,6 +11,7 @@ interface Props {
 const { lang } = Astro.props
 const t = useContent(lang)
 const currentYear = new Date().getFullYear()
+const routes = legalRoutes[lang]
 ---
 
 <footer class="mt-24 border-t border-white/10">
@@ -18,7 +20,13 @@ const currentYear = new Date().getFullYear()
       © {currentYear} {SITE.name}. {t.footer.rights}
     </p>
 
-    <div class="flex items-center gap-5">
+    <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+      <a href={routes.privacy} class="text-sm text-zinc-400 transition hover:text-emerald-400">
+        {t.footer.privacy}
+      </a>
+      <a href={routes.legal} class="text-sm text-zinc-400 transition hover:text-emerald-400">
+        {t.footer.legal}
+      </a>
       <a
         href={SITE.linkedin}
         target="_blank"

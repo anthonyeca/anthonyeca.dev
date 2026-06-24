@@ -1,0 +1,100 @@
+---
+import Legal from '../components/Legal.astro'
+import { SITE, MAILTO } from '../consts'
+---
+
+<Legal
+  lang="es"
+  kind="privacy"
+  title="Política de Privacidad"
+  description="Cómo se tratan tus datos en anthonyeca.dev: sin cookies, sin analítica y con total transparencia."
+  updated="24 de junio de 2026"
+>
+  <h2>1. Responsable del tratamiento</h2>
+  <p>
+    El responsable del tratamiento de los datos recogidos a través de este sitio web es
+    <strong>Anthony Challout</strong> (en adelante, «el Responsable»), titular del sitio
+    <a href="https://anthonyeca.dev">anthonyeca.dev</a>.
+  </p>
+  <ul>
+    <li>Contacto: <a href={MAILTO}>{SITE.email}</a></li>
+  </ul>
+
+  <h2>2. Qué datos tratamos</h2>
+  <p>
+    Este sitio web es informativo y <strong>no utiliza cookies, ni herramientas de analítica, ni
+    formularios</strong>. No creamos perfiles ni rastreamos tu navegación. En la práctica, solo se
+    tratan datos personales en dos situaciones:
+  </p>
+  <ul>
+    <li>
+      <strong>Datos técnicos de conexión.</strong> Para servir la web y protegerla frente a ataques,
+      nuestro proveedor de alojamiento registra de forma automática datos técnicos como la dirección
+      IP, el tipo de navegador y la fecha y hora de acceso, con fines de seguridad y funcionamiento.
+    </li>
+    <li>
+      <strong>Datos de contacto.</strong> Si nos escribes por correo electrónico, trataremos los
+      datos que nos facilites (nombre, dirección de correo y el contenido de tu mensaje) con el fin
+      de atender tu solicitud.
+    </li>
+  </ul>
+
+  <h2>3. Finalidad y base jurídica</h2>
+  <ul>
+    <li>
+      <strong>Seguridad y prestación del servicio</strong> (datos técnicos): interés legítimo del
+      Responsable (art. 6.1.f RGPD) en mantener el sitio seguro y operativo.
+    </li>
+    <li>
+      <strong>Atención de consultas</strong> (datos de contacto): tu consentimiento al escribirnos y,
+      en su caso, la aplicación de medidas precontractuales a petición tuya (art. 6.1.a y 6.1.b RGPD).
+    </li>
+  </ul>
+
+  <h2>4. Conservación</h2>
+  <p>
+    Los datos de contacto se conservan durante el tiempo necesario para atender tu solicitud y,
+    posteriormente, durante los plazos legalmente exigibles. Los registros técnicos del proveedor de
+    alojamiento se conservan durante periodos cortos conforme a sus políticas de seguridad.
+  </p>
+
+  <h2>5. Destinatarios</h2>
+  <p>
+    No vendemos ni cedemos tus datos a terceros. Para funcionar, el sitio se apoya en proveedores que
+    actúan como encargados del tratamiento:
+  </p>
+  <ul>
+    <li><strong>Cloudflare, Inc.</strong> — alojamiento y red de distribución de contenidos (CDN).</li>
+    <li><strong>Google LLC</strong> — el correo de contacto se gestiona a través de Gmail.</li>
+  </ul>
+  <p>
+    Estos proveedores pueden tratar datos en servidores ubicados fuera del Espacio Económico Europeo.
+    En tales casos, las transferencias internacionales se amparan en las garantías adecuadas previstas
+    por el RGPD (como el marco EU-US Data Privacy Framework o las cláusulas contractuales tipo de la
+    Comisión Europea).
+  </p>
+
+  <h2>6. Tus derechos</h2>
+  <p>
+    Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, supresión, oposición,
+    limitación del tratamiento y portabilidad escribiendo a <a href={MAILTO}>{SITE.email}</a>. Si
+    consideras que el tratamiento no se ajusta a la normativa, tienes derecho a presentar una
+    reclamación ante la Agencia Española de Protección de Datos
+    (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>).
+  </p>
+
+  <h2>7. Cookies</h2>
+  <p>
+    Este sitio <strong>no instala cookies</strong> ni tecnologías de seguimiento similares en tu
+    dispositivo. Por ello, no se muestra ningún aviso de cookies.
+  </p>
+
+  <h2>8. Decisiones automatizadas</h2>
+  <p>No se realizan decisiones automatizadas ni elaboración de perfiles con tus datos.</p>
+
+  <h2>9. Cambios en esta política</h2>
+  <p>
+    Esta política puede actualizarse para reflejar cambios legales o en el funcionamiento del sitio.
+    La fecha de la última actualización figura al inicio de esta página.
+  </p>
+</Legal>

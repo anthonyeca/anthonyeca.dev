@@ -1,0 +1,64 @@
+---
+import Legal from '../components/Legal.astro'
+import { SITE, MAILTO } from '../consts'
+---
+
+<Legal
+  lang="es"
+  kind="legal"
+  title="Aviso Legal"
+  description="Información legal e identificativa del titular de anthonyeca.dev conforme a la LSSI-CE."
+  updated="24 de junio de 2026"
+>
+  <h2>1. Datos identificativos</h2>
+  <p>
+    En cumplimiento del deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de
+    julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se
+    facilitan los siguientes datos:
+  </p>
+  <ul>
+    <li><strong>Titular:</strong> Anthony Challout</li>
+    <li><strong>Sitio web:</strong> <a href="https://anthonyeca.dev">anthonyeca.dev</a></li>
+    <li><strong>Correo electrónico:</strong> <a href={MAILTO}>{SITE.email}</a></li>
+    {/* TODO: añadir el NIF cuando te des de alta censal en Hacienda (modelo 036/037). El art. 10 LSSI exige el NIF para una actividad económica. */}
+  </ul>
+
+  <h2>2. Objeto</h2>
+  <p>
+    Este sitio web tiene carácter informativo y presenta los servicios profesionales de desarrollo web
+    del Titular. El acceso al sitio es gratuito y no requiere registro.
+  </p>
+
+  <h2>3. Condiciones de uso</h2>
+  <p>
+    El usuario se compromete a hacer un uso adecuado de los contenidos del sitio y a no emplearlos para
+    actividades ilícitas o contrarias a la buena fe y al ordenamiento jurídico.
+  </p>
+
+  <h2>4. Propiedad intelectual e industrial</h2>
+  <p>
+    Los contenidos de este sitio (textos, diseño, código, imágenes y logotipos) son titularidad del
+    Titular o se utilizan con la debida autorización, y están protegidos por la normativa de propiedad
+    intelectual e industrial. Queda prohibida su reproducción, distribución o transformación sin
+    autorización expresa, salvo los usos permitidos por la ley.
+  </p>
+
+  <h2>5. Responsabilidad</h2>
+  <p>
+    El Titular no se hace responsable de los daños derivados del uso del sitio ni de su
+    indisponibilidad temporal por causas técnicas. El sitio puede contener enlaces a páginas de
+    terceros; el Titular no se responsabiliza de sus contenidos ni de sus políticas de privacidad.
+  </p>
+
+  <h2>6. Protección de datos</h2>
+  <p>
+    El tratamiento de los datos personales de los usuarios se rige por lo dispuesto en la
+    <a href="/privacidad">Política de Privacidad</a>.
+  </p>
+
+  <h2>7. Legislación aplicable</h2>
+  <p>
+    Las presentes condiciones se rigen por la legislación española. Para la resolución de cualquier
+    controversia, las partes se someten a los juzgados y tribunales que correspondan conforme a derecho.
+  </p>
+</Legal>

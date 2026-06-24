@@ -1,0 +1,98 @@
+---
+import Legal from '../../components/Legal.astro'
+import { SITE, MAILTO } from '../../consts'
+---
+
+<Legal
+  lang="en"
+  kind="privacy"
+  title="Privacy Policy"
+  description="How your data is handled on anthonyeca.dev: no cookies, no analytics, full transparency."
+  updated="June 24, 2026"
+>
+  <h2>1. Data controller</h2>
+  <p>
+    The controller responsible for the data collected through this website is
+    <strong>Anthony Challout</strong> (the “Controller”), owner of
+    <a href="https://anthonyeca.dev">anthonyeca.dev</a>.
+  </p>
+  <ul>
+    <li>Contact: <a href={MAILTO}>{SITE.email}</a></li>
+  </ul>
+
+  <h2>2. What data we process</h2>
+  <p>
+    This is an informational website that <strong>uses no cookies, no analytics tools and no
+    forms</strong>. We do not build profiles or track your browsing. In practice, personal data is
+    only processed in two situations:
+  </p>
+  <ul>
+    <li>
+      <strong>Technical connection data.</strong> To serve the site and protect it against attacks,
+      our hosting provider automatically logs technical data such as your IP address, browser type and
+      the date and time of access, for security and operational purposes.
+    </li>
+    <li>
+      <strong>Contact data.</strong> If you email us, we process the data you provide (name, email
+      address and the content of your message) in order to handle your request.
+    </li>
+  </ul>
+
+  <h2>3. Purpose and legal basis</h2>
+  <ul>
+    <li>
+      <strong>Security and service delivery</strong> (technical data): the Controller's legitimate
+      interest (Art. 6(1)(f) GDPR) in keeping the site secure and operational.
+    </li>
+    <li>
+      <strong>Handling enquiries</strong> (contact data): your consent when you contact us and, where
+      applicable, pre-contractual measures taken at your request (Art. 6(1)(a) and 6(1)(b) GDPR).
+    </li>
+  </ul>
+
+  <h2>4. Retention</h2>
+  <p>
+    Contact data is kept for as long as necessary to handle your request and thereafter for any legally
+    required periods. The hosting provider's technical logs are kept for short periods in line with its
+    security policies.
+  </p>
+
+  <h2>5. Recipients</h2>
+  <p>
+    We do not sell or share your data with third parties. To operate, the site relies on the following
+    providers acting as processors:
+  </p>
+  <ul>
+    <li><strong>Cloudflare, Inc.</strong> — hosting and content delivery network (CDN).</li>
+    <li><strong>Google LLC</strong> — the contact mailbox is handled through Gmail.</li>
+  </ul>
+  <p>
+    These providers may process data on servers located outside the European Economic Area. In such
+    cases, international transfers are covered by the appropriate safeguards provided for under the GDPR
+    (such as the EU-US Data Privacy Framework or the European Commission's standard contractual clauses).
+  </p>
+
+  <h2>6. Your rights</h2>
+  <p>
+    You may exercise your rights of access, rectification, erasure, objection, restriction of
+    processing and data portability at any time by writing to <a href={MAILTO}>{SITE.email}</a>. If you
+    believe the processing does not comply with the applicable rules, you have the right to lodge a
+    complaint with the Spanish Data Protection Agency
+    (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>).
+  </p>
+
+  <h2>7. Cookies</h2>
+  <p>
+    This site <strong>does not install cookies</strong> or similar tracking technologies on your
+    device. For this reason, no cookie banner is shown.
+  </p>
+
+  <h2>8. Automated decisions</h2>
+  <p>No automated decision-making or profiling is carried out with your data.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>
+    This policy may be updated to reflect legal or operational changes to the site. The date of the
+    last update is shown at the top of this page.
+  </p>
+</Legal>
