@@ -100,9 +100,9 @@ const projects: Project[] = [
     link: 'https://alvadreams.com',
   },
   {
-    title: 'Novafeature',
+    title: 'NovaFeature',
     technologies: 'Next.js, Tailwind CSS, MongoDB, Auth.js',
-    alt: 'Novafeature website screenshot',
+    alt: 'NovaFeature website screenshot',
     src: novafeature,
     link: 'https://novafeature.com',
   },
