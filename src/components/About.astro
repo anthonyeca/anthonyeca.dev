@@ -14,13 +14,20 @@ const t = useContent(lang)
 
 <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
   <div>
-    <SectionHeading eyebrow={t.about.eyebrow} title={t.about.title} subtitle={t.about.subtitle} align="left" />
+    <SectionHeading
+      eyebrow={t.about.eyebrow}
+      title={t.about.title}
+      subtitle={t.about.subtitle}
+      align="center"
+    />
 
     <dl class="mt-10 grid grid-cols-3 gap-4">
       {
         t.about.stats.map((stat) => (
           <div class="rounded-2xl border border-white/10 bg-zinc-900/40 p-4 text-center">
-            <dt class="text-3xl font-extrabold text-emerald-400">{stat.value}</dt>
+            <dt class="text-3xl font-extrabold text-emerald-400">
+              {stat.value}
+            </dt>
             <dd class="mt-1 text-xs text-zinc-400">{stat.label}</dd>
           </div>
         ))
@@ -29,8 +36,12 @@ const t = useContent(lang)
   </div>
 
   <div>
-    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-400">{t.about.credentialsTitle}</h3>
-    <ol class="relative mt-6 space-y-8 before:absolute before:left-[6px] before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-white/10">
+    <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-400">
+      {t.about.credentialsTitle}
+    </h3>
+    <ol
+      class="relative mt-6 space-y-8 before:absolute before:left-[6px] before:top-2 before:h-[calc(100%-1rem)] before:w-px before:bg-white/10"
+    >
       {
         t.about.credentials.map((credential) => (
           <li>
